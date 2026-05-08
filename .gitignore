@@ -1,0 +1,47 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Dependencies
+backend/vendor/
+backend/node_modules/
+frontend/node_modules/
+
+# Build outputs
+backend/public/build/
+backend/public/hot
+frontend/dist/
+frontend/dist-ssr/
+
+# Runtime data and local databases
+backend/database/*.sqlite
+backend/database/*.sqlite-*
+backend/storage/*.key
+backend/storage/app/private/
+backend/storage/app/public/
+backend/storage/framework/cache/data/
+backend/storage/framework/sessions/
+backend/storage/framework/testing/
+backend/storage/framework/views/*.php
+backend/storage/logs/*.log
+
+# Logs, reports, and local test artifacts
+*.log
+frontend/playwright-report/
+frontend/test-results/
+backend/.phpunit.result.cache
+backend/.phpunit.cache/
+.codex-server-logs/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
