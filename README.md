@@ -1,5 +1,7 @@
 # UMKM OpsHub
 
+[![CI](https://github.com/RanggaEghaPermana/OpsHub/actions/workflows/ci.yml/badge.svg)](https://github.com/RanggaEghaPermana/OpsHub/actions/workflows/ci.yml)
+
 Dashboard operasional untuk UMKM: produk, kategori, stok masuk/keluar, transaksi, pelanggan, invoice PDF, laporan penjualan, audit log, dan multi-role login.
 
 > Repository ini disiapkan sebagai showcase dan source preview. File runtime seperti `.env`, database lokal, credential, storage production, dependency, build output, log, dan hasil test tidak disertakan, sehingga hasil clone tidak langsung bisa dijalankan tanpa konfigurasi environment sendiri.
@@ -138,6 +140,36 @@ Pengaturan mendukung tema terang/gelap/sistem, bahasa Indonesia/Inggris/sistem, 
 ## Status Publik
 
 Repository public tetap dapat di-clone oleh siapa pun. Perlindungan yang diterapkan adalah tidak menyertakan file rahasia dan data runtime. Untuk mencegah penggunaan ulang secara legal, repository ini tidak memakai lisensi open-source; hak cipta tetap milik pemilik repository.
+
+## Dokumentasi Project
+
+- [Feature Overview](docs/features.md)
+- [Architecture](docs/architecture.md)
+- [Deployment Notes](docs/deployment.md)
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+- [Security Policy](SECURITY.md)
+- [License / Rights Notice](LICENSE)
+
+## Metadata GitHub yang Disarankan
+
+Description:
+
+```text
+Modern UMKM operations dashboard for inventory, sales, invoices, reports, and audit logs.
+```
+
+Topics:
+
+```text
+laravel, react, typescript, mysql, tailwindcss, sanctum, dashboard, pos, inventory-management, umkm
+```
+
+Social preview:
+
+```text
+docs/social-preview.png
+```
 
 ## Menjalankan Lokal
 
