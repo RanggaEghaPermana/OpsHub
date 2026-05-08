@@ -25,21 +25,115 @@ Dashboard operasional untuk UMKM: produk, kategori, stok masuk/keluar, transaksi
 - Pengaturan tema `terang`, `gelap`, atau `sistem`, serta bahasa `Indonesia`, `Inggris`, atau `sistem`.
 - Security baseline: rate limit login, validation request, Sanctum token auth, role-based access, hashed password, CORS env, dan soft delete produk.
 
-## Dokumentasi Fitur dan Screenshot
+## Galeri Fitur
 
-Screenshot fitur dapat ditempatkan di `docs/screenshots/` dengan urutan berikut:
+### 1. Login multi-role
 
-- `01-login.png` - Login multi-role dengan tema OpsHub.
-- `02-dashboard.png` - Ringkasan omzet, transaksi, pelanggan aktif, stok menipis, dan grafik.
-- `03-produk.png` - Manajemen produk, kategori, foto produk, stok, pencarian, import/export.
-- `04-stok.png` - Stok masuk, stok keluar, adjustment, dan alert restock.
-- `05-transaksi.png` - Input penjualan, diskon, pajak, pembayaran, kembalian, refund/retur.
-- `06-pelanggan.png` - Data pelanggan dan riwayat pembelian.
-- `07-invoice.png` - Faktur PDF dengan logo resmi.
-- `08-laporan.png` - Laporan penjualan, export CSV/PDF, filter tanggal.
-- `09-laba-rugi.png` - Omzet, modal, pengeluaran, laba kotor, dan laba bersih.
-- `10-audit.png` - Riwayat aktivitas sistem dengan bahasa yang mudah dipahami.
-- `11-pengaturan.png` - Tema terang/gelap/sistem, bahasa Indonesia/Inggris, dan pengaturan toko.
+![Login OpsHub](docs/screenshots/01-login.png)
+
+Halaman login menggunakan tampilan corporate yang sederhana dan modern. Aplikasi mendukung akses berbasis role untuk Admin, Kasir/Staff, dan Owner.
+
+### 2. Dashboard operasional
+
+![Dashboard OpsHub](docs/screenshots/02-dashboard.png)
+
+Dashboard menampilkan ringkasan 30 hari seperti omzet, jumlah transaksi, pelanggan aktif, stok menipis, grafik omzet harian, dan produk terlaris.
+
+### 3. Manajemen produk
+
+![Manajemen produk](docs/screenshots/03-produk.png)
+
+Produk dapat dikelola lengkap dengan SKU, kategori, harga, stok, status aktif, foto produk, pencarian, pagination, import, dan export data.
+
+### 4. Manajemen kategori
+
+![Manajemen kategori](docs/screenshots/04-kategori.png)
+
+Kategori membantu mengelompokkan produk agar pencarian, laporan, dan pengelolaan stok lebih rapi.
+
+### 5. Riwayat stok
+
+![Riwayat stok](docs/screenshots/05-stok.png)
+
+Setiap stok masuk, stok keluar, adjustment, dan transaksi tercatat dengan informasi jumlah sebelum/sesudah serta pengguna yang melakukan perubahan.
+
+### 6. Alert stok
+
+![Alert stok](docs/screenshots/06-alert-stok.png)
+
+Produk yang berada di bawah batas minimum otomatis muncul di halaman alert stok dan bisa langsung direstock dari halaman tersebut.
+
+### 7. Transaksi penjualan
+
+![Transaksi penjualan](docs/screenshots/07-transaksi.png)
+
+Halaman transaksi mencatat penjualan, status pembayaran, total transaksi, serta aksi lanjutan seperti export, cetak faktur, pembatalan, dan refund.
+
+### 8. Faktur penjualan
+
+![Faktur penjualan](docs/screenshots/08-faktur.png)
+
+Faktur menampilkan riwayat transaksi yang siap diunduh sebagai PDF nota/invoice dengan format yang disesuaikan dengan branding toko.
+
+### 9. Manajemen pelanggan
+
+![Manajemen pelanggan](docs/screenshots/09-pelanggan.png)
+
+Data pelanggan menyimpan nama, kontak, email, terakhir beli, pencarian cepat, export CSV, dan detail riwayat pembelian pelanggan.
+
+### 10. Pembelian stok
+
+![Manajemen pembelian](docs/screenshots/10-pembelian.png)
+
+Fitur pembelian mencatat stok masuk dari supplier, nomor referensi, lokasi, status pembelian, dan total biaya pembelian.
+
+### 11. Supplier
+
+![Manajemen supplier](docs/screenshots/11-supplier.png)
+
+Supplier dapat dikelola dengan data kontak, email, alamat, dan status aktif untuk mendukung pencatatan pembelian barang.
+
+### 12. Pengeluaran operasional
+
+![Pengeluaran operasional](docs/screenshots/12-pengeluaran.png)
+
+Pengeluaran seperti bahan, sewa, gaji, listrik, dan biaya operasional lain dicatat agar laporan laba rugi lebih akurat.
+
+### 13. Laporan penjualan
+
+![Laporan penjualan](docs/screenshots/13-laporan.png)
+
+Laporan menyediakan grafik transaksi harian, status pembayaran, produk terlaris, pencarian, filter tanggal, serta export CSV/PDF.
+
+### 14. Laporan laba rugi
+
+![Laporan laba rugi](docs/screenshots/14-laba-rugi.png)
+
+Laporan laba rugi menghitung omzet, harga modal terjual, laba kotor, pengeluaran operasional, dan estimasi laba bersih.
+
+### 15. Lokasi cabang dan gudang
+
+![Lokasi cabang dan gudang](docs/screenshots/15-lokasi.png)
+
+Lokasi digunakan untuk mencatat cabang toko atau gudang sehingga pembelian, stok, dan laporan dapat dikaitkan dengan tempat operasional.
+
+### 16. Riwayat aktivitas
+
+![Riwayat aktivitas](docs/screenshots/16-riwayat.png)
+
+Audit log mencatat aktivitas penting seperti produk dibuat, stok berubah, transaksi dibuat, pelanggan dihapus, dan pengguna yang melakukan perubahan.
+
+### 17. Manajemen pengguna
+
+![Manajemen pengguna](docs/screenshots/17-pengguna.png)
+
+Admin dapat mengelola pengguna aplikasi, role, status aktif, serta akses dasar untuk operasional toko.
+
+### 18. Pengaturan aplikasi
+
+![Pengaturan aplikasi](docs/screenshots/18-pengaturan.png)
+
+Pengaturan mendukung tema terang/gelap/sistem, bahasa Indonesia/Inggris/sistem, data toko, prefix faktur, pajak default, dan backup database.
 
 ## Status Publik
 
