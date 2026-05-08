@@ -126,8 +126,26 @@ async function openView(page, view) {
 
   await clickSidebarButton(page, view.item)
   await page.getByText(view.waitFor, { exact: true }).first().waitFor({ state: 'visible', timeout: 20000 })
+  await waitForViewSettled(page)
   await page.evaluate(() => window.scrollTo(0, 0))
-  await page.waitForTimeout(600)
+  await page.waitForTimeout(300)
+}
+
+async function waitForViewSettled(page) {
+  await page.waitForFunction(() => {
+    const visible = (element) => {
+      const style = window.getComputedStyle(element)
+      const rect = element.getBoundingClientRect()
+      return style.visibility !== 'hidden' && style.display !== 'none' && rect.width > 0 && rect.height > 0
+    }
+
+    const hasLoadingText = Array.from(document.querySelectorAll('.loading-inline')).some(visible)
+    const hasSkeletonRows = Array.from(document.querySelectorAll('tr.skeleton-row')).some(visible)
+
+    return !hasLoadingText && !hasSkeletonRows
+  }, { timeout: 30000 })
+
+  await page.locator('.feedback-toast').waitFor({ state: 'hidden', timeout: 7000 }).catch(() => {})
 }
 
 async function capture(page, file) {
@@ -157,7 +175,8 @@ async function main() {
   await page.getByLabel('Kata sandi').fill('password')
   await page.getByRole('button', { name: 'Masuk', exact: true }).click()
   await page.getByText('Ringkasan 30 hari', { exact: true }).waitFor({ state: 'visible', timeout: 30000 })
-  await page.waitForTimeout(1000)
+  await waitForViewSettled(page)
+  await page.waitForTimeout(500)
 
   for (const view of views) {
     await openView(page, view)
